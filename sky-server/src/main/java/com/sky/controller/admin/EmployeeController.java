@@ -61,6 +61,7 @@ public class EmployeeController {
         return Result.success(employeeLoginVO);
     }
 
+
     /**
      * 退出
      *
@@ -96,6 +97,11 @@ public class EmployeeController {
         return Result.success();
     }
 
+    /**
+     * 通过id查找员工
+     * @param id
+     * @return
+     */
     @GetMapping("/{id}")
     public Result<Employee> getById(@PathVariable Long id){
        Employee employee= employeeService.getById(id);
